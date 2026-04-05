@@ -104,7 +104,7 @@ class SplashScreen extends StatelessWidget {
                   borderRadius: BorderRadius.circular(6),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withValues(alpha: 0.5), // ✅ corregido
+                      color: Colors.black.withValues(alpha: 0.5), // 
                       blurRadius: 12,
                       offset: const Offset(0, 4),
                     ),
@@ -158,7 +158,7 @@ class SplashScreen extends StatelessWidget {
             ],
           ),
 
-          // Estrella decorativa ✅ ícono corregido
+          // Estrella decorativa
           const Positioned(
             bottom: 20,
             right: 20,
@@ -253,15 +253,15 @@ class LoginScreen extends StatelessWidget {
                 child: Container(
                   padding: const EdgeInsets.all(28),
                   decoration: BoxDecoration(
-                    color: Colors.white.withValues(alpha: 0.12), // ✅ corregido
+                    color: Colors.white.withValues(alpha: 0.12), // 
                     borderRadius: BorderRadius.circular(16),
                     border: Border.all(
-                      color: Colors.white.withValues(alpha: 0.2), // ✅ corregido
+                      color: Colors.white.withValues(alpha: 0.2), // 
                       width: 1,
                     ),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.black.withValues(alpha: 0.4), // ✅ corregido
+                        color: Colors.black.withValues(alpha: 0.4), // 
                         blurRadius: 20,
                         spreadRadius: 2,
                       ),
@@ -299,7 +299,7 @@ class LoginScreen extends StatelessWidget {
                             boxShadow: [
                               BoxShadow(
                                 color: const Color(0xFFFFD700)
-                                    .withValues(alpha: 0.3), // ✅ corregido
+                                    .withValues(alpha: 0.3), // 
                                 blurRadius: 12,
                                 offset: const Offset(0, 4),
                               ),
@@ -337,7 +337,7 @@ class LoginScreen extends StatelessWidget {
                             child: Text(
                               '¿Olvidaste tu contraseña?',
                               style: TextStyle(
-                                color: Colors.white.withValues(alpha: 0.8), // ✅ corregido
+                                color: Colors.white.withValues(alpha: 0.8), // 
                                 fontSize: 13,
                               ),
                             ),
@@ -365,7 +365,7 @@ class LoginScreen extends StatelessWidget {
             ],
           ),
 
-          // Estrella decorativa ✅ ícono corregido
+          // Estrella decorativa
           const Positioned(
             bottom: 20,
             right: 20,
@@ -414,9 +414,9 @@ class _CurtainPanel extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                   colors: [
-                    Colors.black.withValues(alpha: 0.3), // ✅ corregido
+                    Colors.black.withValues(alpha: 0.3), // 
                     Colors.transparent,
-                    Colors.black.withValues(alpha: 0.2), // ✅ corregido
+                    Colors.black.withValues(alpha: 0.2), // 
                   ],
                 ),
               ),
@@ -479,20 +479,20 @@ class _LoginField extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hint,
         hintStyle: TextStyle(
-            color: Colors.white.withValues(alpha: 0.5)), // ✅ corregido
+            color: Colors.white.withValues(alpha: 0.5)), // 
         filled: true,
-        fillColor: Colors.white.withValues(alpha: 0.15), // ✅ corregido
+        fillColor: Colors.white.withValues(alpha: 0.15), //
         contentPadding:
             const EdgeInsets.symmetric(horizontal: 16, vertical: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-              color: Colors.white.withValues(alpha: 0.2)), // ✅ corregido
+              color: Colors.white.withValues(alpha: 0.2)), // 
         ),
         enabledBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: BorderSide(
-              color: Colors.white.withValues(alpha: 0.2)), // ✅ corregido
+              color: Colors.white.withValues(alpha: 0.2)), // 
         ),
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
