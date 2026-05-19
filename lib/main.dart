@@ -40,7 +40,7 @@ class MyApp extends StatelessWidget {
 
 /// Redirige al usuario según su estado de autenticación:
 /// - Si hay sesión activa → Cartelera
-/// - Si no → Pantalla de inicio (Bienvenida)
+/// - Si no → Pantalla de inicio (Bienvenida) algo sale mal aquí... sino se autentifica un usuario, se detiene la app
 class _AuthGate extends StatelessWidget {
   const _AuthGate();
 
