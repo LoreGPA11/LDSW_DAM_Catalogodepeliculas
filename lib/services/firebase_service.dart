@@ -6,6 +6,8 @@ class FirebaseService {
   // Colección de favoritos (puedes agregar userId si implementas Auth)
   CollectionReference get _favs => _db.collection('favoritos');
 
+  get currentUser => null;
+
   Future<void> addFavorite(Movie movie) =>
       _favs.doc(movie.id.toString()).set(movie.toFirestore());
 
@@ -18,4 +20,16 @@ class FirebaseService {
     final doc = await _favs.doc(movieId.toString()).get();
     return doc.exists;
   }
+
+  Future<void> register(String trim, String trim2) async {}
+
+  Future<void> login(String trim, String trim2) async {}
+
+  Stream<List<Map<String, dynamic>>>? customMoviesStream() {}
+
+  Future<void> logout() async {}
+
+  Future<void> deleteCustomMovie(String docId) async {}
+
+  Future<void> addCustomMovie(Movie movie) async {}
 }
