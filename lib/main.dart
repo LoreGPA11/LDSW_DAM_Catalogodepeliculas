@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+// ignore: unused_import
 import 'firebase_options.dart';
 import 'screens/home_screen.dart';
 import 'screens/cartelera_screen.dart';
-import 'services/firebase_service.dart' hide FirebaseService;
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -38,18 +39,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/// Redirige al usuario según su estado de autenticación:
-/// - Si hay sesión activa → Cartelera
-/// - Si no → Pantalla de inicio (Bienvenida) algo sale mal aquí... sino se autentifica un usuario, se detiene la app
 class _AuthGate extends StatelessWidget {
   const _AuthGate();
 
   @override
   Widget build(BuildContext context) {
-    final firebase = FirebaseService();
-    return StreamBuilder(
-      stream: firebase.authStateChanges,
+    return StreamBuilder<User?>(
+      // authStateChanges emite null mientras carga, luego User o null
+      stream: FirebaseAuth.instance.authStateChanges(),
       builder: (context, snapshot) {
+        // Mientras Firebase Auth no ha resuelto el estado → spinner
         if (snapshot.connectionState == ConnectionState.waiting) {
           return const Scaffold(
             backgroundColor: Color(0xFF0D0000),
@@ -58,6 +57,7 @@ class _AuthGate extends StatelessWidget {
             ),
           );
         }
+        // Auth resuelto: hay usuario → Cartelera, no hay → Home
         if (snapshot.hasData && snapshot.data != null) {
           return const CarteleraScreen();
         }
