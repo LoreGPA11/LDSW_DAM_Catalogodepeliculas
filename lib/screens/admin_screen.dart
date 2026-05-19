@@ -299,6 +299,7 @@ class _Field extends StatelessWidget {
     required this.controller,
     required this.label,
     required this.icon,
+    // ignore: unused_element_parameter
     this.obscure = false,
     this.maxLines = 1,
     this.keyboard = TextInputType.text,
